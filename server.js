@@ -26,6 +26,14 @@ app.set('views', path.join(__dirname, '/views/'));
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/' }));
 app.set('view engine', 'hbs');
 
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(path.join(__dirname, 'LOOT LE BUDDY/build')));
+
+	app.use('*', (req, res) =>
+		res.sendFile(path.resolve(__dirname, 'LOOT LE BUDDY ', 'build', 'server.js'))
+	);
+}
+
 app.listen(port, () => {
     console.log(`Express server started at port : ${port}`);
 });
