@@ -1,0 +1,72 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/pool" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{pool._id}}">
+    <div class="form-group">
+        <label>PoolID</label>
+        <input type="text" class="form-control" name="PoolID" placeholder="PoolID" value="{{pool.PoolID}}">
+       <div class="text-danger">
+            {{pool.PoolIDError}}</div>
+    </div>
+    <div class="form-group">
+        <label>PoolName</label>
+        <input type="text" class="form-control" name="PoolName" placeholder="PoolName" value="{{pool.PoolName}}">
+      
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Hemper1</label>
+            <input type="text" class="form-control" name="Hemper1" placeholder="Hemper1" value="{{pool.Hemper1}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Hemper1Worth</label>
+            <input type="text" class="form-control" name="Hemper1Worth" placeholder="Hemper1Worth" value="{{pool.Hemper1Worth}}">
+        </div>
+    </div>
+
+     <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Hemper2</label>
+            <input type="text" class="form-control" name="Hemper2" placeholder="Hemper2" value="{{pool.Hemper2}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Hemper2Worth</label>
+            <input type="text" class="form-control" name="Hemper2Worth" placeholder="Hemper2Worth" value="{{pool.Hemper2Worth}}">
+        </div>
+    </div>
+
+     <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Hemper3</label>
+            <input type="text" class="form-control" name="Hemper3" placeholder="Hemper3" value="{{pool.Hemper3}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Hemper3Worth</label>
+            <input type="text" class="form-control" name="Hemper3Worth" placeholder="Hemper3Worth" value="{{pool.Hemper3Worth}}">
+        </div>
+    </div>
+
+     <div class="form-group">
+        <label>CoinsNeededToParticipate</label>
+        <input type="text" class="form-control" name="CoinsNeededToParticipate" placeholder="CoinsNeededToParticipate" value="{{pool.CoinsNeededToParticipate}}">
+        <div class="text-danger">
+            {{pool.CoinsNeededToParticipateError}}</div>
+    </div>
+
+    
+     <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>PoolStartDate</label>
+            <input type="text" class="form-control" name="PoolStartDate" placeholder="PoolStartDate" value="{{pool.PoolStartDate}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>PoolEndDate</label>
+            <input type="text" class="form-control" name="PoolEndDate" placeholder="PoolEndDate" value="{{pool.PoolEndDate}}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="pool/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

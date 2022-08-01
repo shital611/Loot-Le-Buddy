@@ -1,0 +1,42 @@
+<h3><a class="btn btn-secondary" href="/pool"><i class="fa fa-plus"></i> Create New</a> Pool List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>PoolID</th>
+            <th>PoolName</th>
+            <th>Hemper1</th>
+            <th>Hemper1Worth</th>
+            <th>Hemper2</th>
+            <th>Hemper2Worth</th>
+            <th>Hemper3</th>
+            <th>Hemper3Worth</th>
+            <th>CoinsNeededToParticipate</th>
+            <th>PoolStartDate</th>
+            <th>PoolEndDate</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.PoolID}}</td>
+            <td>{{this.PoolName}}</td>
+            <td>{{this.Hemper1}}</td>
+            <td>{{this.Hemper1Worth}}</td>
+            <td>{{this.Hemper2}}</td>
+            <td>{{this.Hemper2Worth}}</td>
+            <td>{{this.Hemper3}}</td>
+            <td>{{this.Hemper3Worth}}</td>
+            <td>{{this.CoinsNeededToParticipate}}</td>
+            <td>{{this.PoolStartDate}}</td>
+            <td>{{this.PoolEndDate}}</td>
+
+            <td>
+                <a href="/pool/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/pool/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
