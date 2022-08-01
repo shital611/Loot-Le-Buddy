@@ -30,4 +30,4 @@ app.listen(port, () => {
     console.log(`Express server started at port : ${port}`);
 });
 
-app.use('/pool', employeeController);
+app.use('http://localhost:3000/pool', employeeController);
